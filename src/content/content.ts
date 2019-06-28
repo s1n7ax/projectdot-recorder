@@ -8,12 +8,12 @@ const main = () => {
      */
     const defaultHandler = new LogHandler();
     defaultHandler
-        .withFilter(LogLevel.ERROR)
-        .withFilter(LogLevel.WARN)
-        .withFilter(LogLevel.INFO)
-        .withFilter(LogLevel.DEBUG)
-        .withFilter(LogLevel.VERBOSE)
-        .withFilter(LogLevel.TRACE)
+        .withLogLevel(LogLevel.ERROR)
+        .withLogLevel(LogLevel.WARN)
+        .withLogLevel(LogLevel.INFO)
+        .withLogLevel(LogLevel.DEBUG)
+        .withLogLevel(LogLevel.VERBOSE)
+        .withLogLevel(LogLevel.TRACE)
         .withTimestamp();
 
     Logger.addHandler(defaultHandler);

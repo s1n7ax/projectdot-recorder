@@ -47,7 +47,7 @@ export default class LogHandler implements ILogHandler {
      * @param { LogLevel } level - LogLevel to be added
      * @returns { LogHandler } return the current instance
      */
-    withFilter(level: LogLevel): this {
+    withLogLevel(level: LogLevel): this {
         this.filters.add(level);
         return this;
     }
