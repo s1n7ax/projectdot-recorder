@@ -5,7 +5,8 @@ import LogLevel from './LogLevel';
  * - Provide APIs to log a message (logging will does nothing if handlers are not set to do the job)
  * - Provide APIs to add { ILogHandler } s
  * - I found this awesome definition from [https://www.npmjs.com/package/js-logger]
- * 	This is all you need to know
+ *
+ * 	This is all you need to know to use the logger
  * 		Logger.debug("I'm a debug message!");
  * 		Logger.info("OMG! Check this window out!", window);
  * 		Logger.warn("Purple Alert! Purple Alert!");
@@ -21,7 +22,12 @@ export default class Logger {
      */
     private static readonly handlers = new Set<ILogHandler>();
 
-    static addHandler(handler: ILogHandler) {
+    /** Add ILogHandler object to handle log
+     *
+     * @param { ILogHandler } handler - handler object to handle logs
+     * @returns { void }
+     */
+    static addHandler(handler: ILogHandler): void {
         Logger.handlers.add(handler);
     }
 
@@ -37,7 +43,12 @@ export default class Logger {
         Logger.log(LogLevel.INFO, ...message);
     }
 
-    static removeHandler(handler: ILogHandler) {
+    /** Remove ILogHandler object from handling logs
+     *
+     * @param { ILogHandler } handler - handler object to be removed
+     * @returns { void }
+     */
+    static removeHandler(handler: ILogHandler): void {
         Logger.handlers.delete(handler);
     }
 
@@ -53,6 +64,12 @@ export default class Logger {
         Logger.log(LogLevel.WARN, ...message);
     }
 
+    /** Notify handlers list about the logs
+     *
+     * @param { LogLevel } level - level of the log message
+     * @param { Object[] } message - one or more messages
+     * @returns { void }
+     */
     private static log(level: LogLevel, ...message: readonly Object[]): void {
         Logger.handlers.forEach(handler => {
             handler.handle(level, ...message);
