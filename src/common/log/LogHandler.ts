@@ -99,7 +99,6 @@ export default class LogHandler implements ILogHandler {
      * @returns { Function } - standard output method
      */
     private getSOut(level: LogLevel): Function {
-        this.timestamp = true;
         let sout: Function;
         switch (level) {
             case LogLevel.ERROR:
