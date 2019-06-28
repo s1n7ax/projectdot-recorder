@@ -128,7 +128,7 @@ export default class LogHandler implements ILogHandler {
         return sout;
     }
 
-    /** Check a log level is in the filter list or not
+    /** Check if a log level is in the filter list or not
      *
      * @param { LogLevel } level - LogLevel to check the availability in filters list
      * @returns { boolean } - true if LogLevel is in the filter list
