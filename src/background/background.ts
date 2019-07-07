@@ -1,6 +1,6 @@
-import Logger from '../common/log/Logger';
-import LogHandler from '../common/log/LogHandler';
-import LogLevel from '../common/log/LogLevel';
+import Logger from '../log/Logger';
+import LogHandler from '../log/LogHandler';
+import LogLevel from '../log/LogLevel';
 
 const main = () => {
     /*
