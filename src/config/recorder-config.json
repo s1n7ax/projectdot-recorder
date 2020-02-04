@@ -1,0 +1,14 @@
+{
+    "popup-window": {
+        "create-data": {
+            "focused": true,
+            "state": "maximized",
+            "type": "popup",
+            "url": "popup.html"
+        },
+        "focus-update-info": {
+            "focused": true,
+            "drawAttention": true
+        }
+    }
+}

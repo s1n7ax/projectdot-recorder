@@ -40,7 +40,7 @@
                 "alphabetize": true
             }
         ],
-        "no-any": true,
+        "no-any": false,
         "no-empty-interface": true,
         "no-import-side-effect": [
             true,
@@ -110,7 +110,7 @@
         "no-switch-case-fall-through": true,
         "no-tautology-expression": true,
         "no-this-assignment": true,
-        "no-unbound-method": true,
+        "no-unbound-method": [true, "ignore-static"],
         "no-unnecessary-class": false,
         "no-unsafe-any": true,
         "no-unsafe-finally": true,
